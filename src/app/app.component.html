@@ -1,0 +1,22 @@
+<div (click)="open()" class="stock-search-component-small">
+  <div class="stock-search">
+    <input [ngModel]="search"
+ (ngModelChange)="searchFunc($event)" class="search-box" placeholder="Search stock..." title="Search for stock information" />
+
+    <div class="icon-search-wrapper">
+      <i class="fas fa-search"></i>
+    </div>
+  </div>
+
+  <div (click)="clear() && hide()" class="stock-search-result">
+    <div *ngFor="let stock of searchTickers.RelatedTopics" class="search-result-item">
+      <div class="search-result-image">
+        <img [src]="getStockImage(stock)" />
+      </div>
+
+      <div class="search-result-name">
+        <strong>{{ stock.Text }}</strong> |
+      </div>
+    </div>
+  </div>
+</div>
