@@ -24,7 +24,7 @@ export class AppComponent {
   clear() {
     this.search = "";
   }
-  getStockImage(symbol: any) {
+  getImage(symbol: any) {
     
     return `https://api.duckduckgo.com${symbol?.Icon?.URL}` ;
   }
@@ -40,6 +40,7 @@ export class AppComponent {
         this.searchTickers = data;
       });
   }
+  
   searchFunc(val) {
     this.search = val;
     if (val != "") {

@@ -11,7 +11,7 @@
   <div (click)="clear() && hide()" class="stock-search-result">
     <div *ngFor="let stock of searchTickers.RelatedTopics" class="search-result-item">
       <div class="search-result-image">
-        <img [src]="getStockImage(stock)" />
+        <img [src]="getImage(stock)" />
       </div>
 
       <div class="search-result-name">
